@@ -4,6 +4,9 @@ import { useRouter } from "next/router"
 import {useContext} from "react";
 
 export default function Navbar() {
+
+    const router = useRouter();
+    const currentRoute = router.pathname;
     
   return (
     <>
@@ -21,7 +24,7 @@ export default function Navbar() {
                 <nav className="text-sm flex flex-col items-start h-full font-bold">
 
                     <Link href="/vendor/dashboard">
-                        <div className= "hover:bg-gray-700 flex items-center w-52 px-8">
+                    <div className={currentRoute === '/dashboard' || currentRoute === '/vendor/designgallery' ? "bg-primary w-52 px-8" : "bg-none w-52 px-8" }>
                             <div className="flex justify-start items-center py-4">
                                 <h3 className="ml-2 text-black">Dashboard</h3>
                             </div>
@@ -29,7 +32,7 @@ export default function Navbar() {
                     </Link>
                 
                     <Link href="/vendor/templatelist">
-                        <div className="hover:bg-gray-700 flex items-center  w-52 px-8">
+                    <div className={currentRoute === '/dashboard' || currentRoute === '/vendor/designgallery' ? "bg-primary w-52 px-8" : "bg-none w-52 px-8" }>
                             <div className="flex justify-start items-center py-4">
                                 <h3 className="ml-2 text-black">My Templates</h3>
                             </div>

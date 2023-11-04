@@ -1,56 +1,47 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Head from "next/head";
+import { Paper, Button } from "@mui/material";
+import Image from "next/image";
+import Carousel from "react-material-ui-carousel";
 
-const Hero = () => {
-  const text = "Crowdento is an Event management company that excels in crafting unforgettable events. Merging local traditions with modern flair, we orchestrate experiences that resonate. Driven by precision and creativity, we're redefining gatherings in Chennai.";
+export default function CarouselComponent() {
+  const slides = [
+    {
+      url: "https://cdn.discordapp.com/attachments/981618787491127306/1078748875063570532/c1.png",
+    },
+    {
+      url: "https://cdn.discordapp.com/attachments/750752324712136828/1078909357984591872/pexels-photo-1884581.png",
+    },
+    {
+      url: "https://cdn.discordapp.com/attachments/750752324712136828/1078910045556842496/pexels-photo-996329.png",
+    },
+    {
+      url: "https://cdn.discordapp.com/attachments/750752324712136828/1078910290470637638/pexels-photo-3755706.png",
+    },
+    {
+      url: "https://cdn.discordapp.com/attachments/750752324712136828/1078910557727502346/pexels-photo-3839432.png",
+    },
+  ];
 
-  const handleScroll = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" });// Close mobile menu after clicking a link
-  };
-  
   return (
-    <>
-    <Head>
-        <meta name="description" content="Crowdento is an Event management company that excels in crafting unforgettable events. Merging local traditions with modern flair, we orchestrate experiences that resonate. Driven by precision and creativity, we're redefining gatherings in Chennai."/>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property='og:image' content="/cc1.png"/>
-        <link rel='icon' href='/cc1.png' />
-        <title>Crowdento Events</title>
-    </Head>
-    <motion.section 
-      id="hero" 
-      className="h-screen bg-white flex flex-col items-center justify-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.2, duration: 2 }}
-    >
-      <img src="/fill logo.png" alt="Logo" className="h-auto w-11/12" />
-      
-      <div className="font-jb w-11/12 tetx-center text-justify md:text-2xl mx-4 my-6 text-black">
-        {text.split(" ").map((word, index) => (
-          <motion.span 
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 + index * 0.1 }}
-          >
-            {word + " "}
-          </motion.span>
+    <div className='h-fit w-full'>
+      <Carousel>
+        {slides.map((slide, index) => (
+          <Item key={index} item={slide.url} />
         ))}
-      </div>
-
-      <motion.div 
-        className="absolute bottom-4 animate-bounce"
-        initial={{ y: -10 }}
-        animate={{ y: 10 }}
-        transition={{ repeat: Infinity, duration: 0.8 }}
-      >
-      <img src="/arrow.png" onClick={() => handleScroll("about")} alt="arrow" className="h-10 md:h-14 w-auto" />
-      </motion.div>
-    </motion.section>
-    </>
+      </Carousel>
+    </div>
   );
-};
+}
 
-export default Hero;
+function Item(props) {
+  return (
+    <div className='w-full h-fit md:h-[80vh] mx-auto'>
+      <Image
+        src={props.item}
+        alt='carousel'
+        height={900}
+        width={900}
+        className='object-contain object-center w-full h-fit'
+      />
+    </div>
+  );
+}

@@ -22,7 +22,7 @@ const Contact = () => {
       <h1 className="font-bs text-5xl text-[#f7f7f7]">Contact Us</h1>
       <p className="font-jb text-center text-[#b3b3b3] w-11/12 lg:w-2/5">If you have any questions or would like more information about our services, please feel free to contact us. We're here to help!</p>
       
-      <div className="grid grid-cols-4 gap-4 md:gap-10 md:pt-10 pb-6">
+      {/* <div className="grid grid-cols-4 gap-4 md:gap-10 md:pt-10 pb-6">
         <Link href="https://www.instagram.com/crowdento" target="_blank">
         <div className="flex flex-col items-center">
           <img src="/insta.png" alt="Phone" className="w-6 md:w-10 h-auto" />
@@ -45,7 +45,8 @@ const Contact = () => {
           <img src="/wap.png" alt="Phone" className="w-6 md:w-10 h-auto" />
         </div>
         </Link>
-      </div>
+      </div> */}
+      
       
       
       <div className="w-full bg-white px-2 py-2 items-center flex justify-center">
