@@ -20,19 +20,17 @@ const About = () => {
     >
       <h1 className="font-bs text-5xl pl-4 md:pl-10 text-[#F7FFF7]">About Us</h1>
       <div className="grid grid-cols-1 gap-6 pb-6 p-4 md:pl-10 md:pr-10">
-        <p className="text-justify font-jb text-[#B3B3B3]">Founded in the heart of Chennai, Crowdento has emerged as a leading name in event management, revered for its impeccable blend of creativity and precision. The name "Crowdento" is derived from the art of orchestrating grand events ('crowd') with unmatched expertise and meticulous planning ('-ento').</p>
-        <p className="text-justify font-jb text-[#B3B3B3]">Our strength lies in understanding our client's vision and transforming it into reality. With a dedicated team of professionals spanning various domains—from venue selection, decor, and culinary experts to entertainment specialists—we ensure every detail is perfectly aligned with the event's objectives.</p>
-        <p className="text-justify font-jb text-[#B3B3B3]">Chennai, with its rich tapestry of culture, modernity, and tradition, offers a unique backdrop for events. Crowdento leverages this, merging local traditions with contemporary trends, ensuring every event stands out and resonates with its audience.  Over the years, our commitment to excellence and a keen understanding of the evolving event landscape has earned us the trust and loyalty of our clients. At Crowdento, we don't just plan events; we craft memories.</p>
+        <p className="text-justify font-jb text-[#B3B3B3] text-xl font-bold">Welcome to RESSILIENCE</p>
+        <p className="text-justify font-jb text-[#B3B3B3]">We are the driving force behind coastal resilience and sustainable development in the Mekong Delta. Our mission is to protect the region's rich ecosystems, vital infrastructure, and local livelihoods from the relentless threat of coastal erosion.</p>
       </div>
 
-      <h1 className="font-bs text-5xl pl-4 md:pl-10 text-[#F7FFF7]">Kandaraoli's Vision</h1>
+      <h1 className="font-bs text-5xl pl-4 md:pl-10 text-[#F7FFF7]">Ressilience's Vision</h1>
       <div className="grid grid-cols-1 gap-6 pb-6 p-4 md:pl-10 md:pr-10">
-        <p className="text-justify font-jb text-[#B3B3B3]"><span className="font-bold">Creating Tomorrow's Gatherings Today:</span> At Crowdento, we envision a world where every event is more than just a gathering—it's an experience, a memory, and a moment that lasts a lifetime.</p>
-        <p className="text-justify font-jb text-[#B3B3B3]"><span className="font-bold">Crafting Unforgettable Moments:</span> Our vision is to redefine the event experience, making every occasion not just memorable, but transformative.</p>
-        <p className="text-justify font-jb text-[#B3B3B3]"><span className="font-bold">Bringing Dreams to Life:</span>  At Crowdento, we believe in the power of an event to inspire, to bring together, and to create lasting impressions. Our vision is to turn every dream into a reality, one event at a time.</p>
+        <p className="text-justify font-jb text-[#B3B3B3] text-xl font-bold">A Resilient Mekong Delta</p>
+        <p className="text-justify font-jb text-[#B3B3B3]">Our vision is a Mekong Delta that stands strong against the challenges of climate change and coastal erosion, offering a secure and prosperous future for its people and the environment.</p>
       </div>
 
-      <h1 className="font-bs text-5xl pl-4 md:pl-10 text-[#F7FFF7]">Kandaraoli's Mission</h1>
+      <h1 className="font-bs text-5xl pl-4 md:pl-10 text-[#F7FFF7]">Ressilience's Mission</h1>
       <div className="grid grid-cols-1 gap-6 pb-6 p-4 md:pl-10 md:pr-10">
         <p className="text-justify font-jb text-[#B3B3B3]"><span className="font-bold">Crafting Experiences, Building Memories:</span> Our mission at Crowdento is to harness the power of creativity and precision to design events that resonate, inspire, and leave an indelible mark.</p>
         <p className="text-justify font-jb text-[#B3B3B3]"><span className="font-bold">Where Precision Meets Passion:</span> At Crowdento, our mission is to blend meticulous planning with a passion for creativity, ensuring every event we manage stands out and leaves a lasting impact.</p>

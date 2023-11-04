@@ -24,10 +24,7 @@ const NavHome = () => {
             <button onClick={() => handleScroll("about")} className="text-black">About</button>
           </li>
           <li>
-            <button onClick={() => handleScroll("services")} className="text-black">Services</button>
-          </li>
-          <li>
-            <button onClick={() => router.push("/flow")} className="text-black">Event Flow</button>
+            <button onClick={() => router.push("/projects")} className="text-black">Projects</button>
           </li>
           <li>
             <button onClick={() => handleScroll("contact")} className="text-black">Contact</button>

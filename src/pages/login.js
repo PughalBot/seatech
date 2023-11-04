@@ -14,7 +14,7 @@ export default function Login() {
         {/* Left Side */}
         <div className="fixed top-0 w-full items-center justify-center bg-black md:static md:flex md:w-2/5">
           <h1 className="md:0 px-6 py-3 font-montserrat text-2xl font-bold text-white md:text-7xl">
-            Resiience.
+            Ressilience.
           </h1>
         </div>
 
