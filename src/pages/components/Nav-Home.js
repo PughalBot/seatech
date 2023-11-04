@@ -18,7 +18,7 @@ const NavHome = () => {
         {/* Desktop navbar items */}
         <ul className={`flex space-x-4 w-full text-lg pl-4 pr-4 md:pl-8 md:pr-8 justify-between md:flex`}>
           <li>
-            <button onClick={() => handleScroll("hero")} className="text-black">Home</button>
+            <button onClick={() => router.push("/")} className="text-black">Home</button>
           </li>
           <li>
             <button onClick={() => handleScroll("about")} className="text-black">About</button>
@@ -27,7 +27,7 @@ const NavHome = () => {
             <button onClick={() => router.push("/projects")} className="text-black">Projects</button>
           </li>
           <li>
-            <button onClick={() => handleScroll("contact")} className="text-black">Contact</button>
+            <button onClick={() => router.push("/login")} className="text-black">Industry Login</button>
           </li>
         </ul>
       </div>

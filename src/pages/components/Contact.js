@@ -50,7 +50,7 @@ const Contact = () => {
       
       
       <div className="w-full bg-white px-2 py-2 items-center flex justify-center">
-        <h1 className="text-black font-medium">{`© ${new Date().getFullYear()} Crowdento Events. All Rights Reserved.`}</h1>
+        <h1 className="text-black font-medium">{`© ${new Date().getFullYear()} Ressilience. All Rights Reserved.`}</h1>
       </div>
     </motion.section>
     </>
