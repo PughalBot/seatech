@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import { useRouter } from 'next/router';
+import Modal from './components/Modal'; // Replace with your actual path to FilmModal component
 
 export default function BuyCred() {
-  // State to store the credit needed
   const [credit, setCredit] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
 
-  // Function to handle changes in the credit input
   const handleCreditChange = (event) => {
-    // Update the credit state with the new value
     setCredit(event.target.value);
   };
 
-  // Function to calculate the payment amount
   const calculateTotal = () => {
-    // Multiply the credit by 40
     return Number(credit) * 40;
+  };
+
+  const handleOpenModal = () => {
+    // Check if credit is a number and greater than 0
+    if (!isNaN(credit) && Number(credit) > 0) {
+      setIsModalOpen(true);
+    } else {
+      alert('Please enter a valid credit amount.');
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Function to close the modal
+  };
+
+  const handleConfirmModal = () => {
+    // Here you can handle the confirmation action, such as processing the payment
+    // For now, we'll just close the modal and route to success page
+    setIsModalOpen(false);
+    router.push("/success"); // This should be the correct route
   };
 
   const router = useRouter();
@@ -65,11 +82,11 @@ export default function BuyCred() {
               </span>
             </div>
             <div className="md:flex md:justify-end">
-              <Button
+            <Button
                 variant="contained"
                 type="button"
                 className="shadow focus:shadow-outline bg-black hover:bg-white hover:text-black focus:outline-none text-white font-bold py-2 px-4 rounded"
-                onClick={() => router.push("/sucess")}
+                onClick={handleOpenModal} // Open modal on button click
               >
                 Pay ${credit ? calculateTotal() : '0'}
               </Button>
@@ -77,6 +94,14 @@ export default function BuyCred() {
           </form>
         </div>
       </div>
+      {/* Conditional rendering of the FilmModal */}
+      {isModalOpen && (
+        <Modal
+          amount={credit}
+          onClose={handleCloseModal}
+          onConfirm={handleConfirmModal}
+        />
+      )}
     </div>
   );
 }
